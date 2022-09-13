@@ -9,9 +9,9 @@ void print_alphabet_x10(void)
 {
 	int x, y;
 
-	x = 1;
+	x = 0;
 
-	while (x <= 10)
+	while (x < 10)
 	{
 		for (y = 97; y <= 122; y++)
 		{
