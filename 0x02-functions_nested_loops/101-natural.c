@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints natural numbers below 1024 and are multiples of 3
+ * main - Prints natural numbers below 1024 and are multiples of 3.
  *
  * Return: 0 (Always).
  */
