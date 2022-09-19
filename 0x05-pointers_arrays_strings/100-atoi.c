@@ -23,7 +23,7 @@ int _atoi(char *s)
 				a *= 10;
 			sz++;
 		}
-		x++
+		x++;
 	}
 
 	for (i = x - size; i < count; i++)
