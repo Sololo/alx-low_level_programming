@@ -9,7 +9,7 @@ Repository about Low Level Programming in the Language C
 ## Projects
 Following directories are projects done during course
 | Project | Description |
-| :-----------:| :-----------: |
+| :----------- | :----------- |
 | 0x00-hello_world | Concerns with entry point, basic local library functions, compilation process using gcc in C |
 | 0x01-variables_if_else_while | Concerns arithmetic operators, relational operators, comments, boolean operators, declaring variables and loops in C|
 | 0x02-function_nested_loops | Concerns header files, loops, nested loops and functions in C|
