@@ -11,7 +11,7 @@ char *string_toupper(char *s)
 {
 	int x = 0;
 
-	for (x = 0; s[x] != '\0'; x++)
+	for (; s[x] != '\0'; x++)
 	{
 		if (s[x] >= 'a' && s[x] <= 'z')
 			s[x] = s[x] - 32;
