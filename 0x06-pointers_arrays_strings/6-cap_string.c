@@ -21,7 +21,7 @@ char *cap_string(char *s)
 			if (*(s + x) == ind_words[y])
 			{
 				if ((*(s + (x + 1)) >= 97) && (*(s + (x + 1)) <= 122))
-					*(s + (x + 1)) = *(s + (x + 1)) - 33;
+					*(s + (x + 1)) = *(s + (x + 1)) - 32;
 				break;
 			}
 		}
