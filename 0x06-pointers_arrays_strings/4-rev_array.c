@@ -17,8 +17,8 @@ void reverse_array(int *a, int n)
 		for (y = x + 1; y > 0; y--)
 		{
 			z = *(x + y);
-			*(x + y) = *(x + (y - 1));
-			*(x + (y - 1)) = z;
+			*(a + y) = *(a + (y - 1));
+			*(a + (y - 1)) = z;
 		}
 	}
 }
