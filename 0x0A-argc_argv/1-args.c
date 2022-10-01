@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include "main.h"
+
+/**
+ * main - prints number of agruments of the program
+ * @argc: number of arguments
+ * @argv: array of arguments
+ * Return: Always 0 (Success)
+ */
+
+int main(int argc, char *argv[] __attribute__((unused)))
+{
+	print("%d\n", argc);
+
+	return (0);
+}
