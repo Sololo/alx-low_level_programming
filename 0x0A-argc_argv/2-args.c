@@ -13,13 +13,12 @@ int main(int argc, char *argv[])
 	int x, y;
 
 	x = 0;
-	y = argc - 1;
+	
 
-	while (y > 0)
+	while (x < argc)
 	{
 		printf("%s\n", argv[x]);
 		x++;
-		y--;
 	}
 	
 	return (0);
