@@ -21,4 +21,6 @@ int main(int argc, char *argv[])
 		x++;
 		y--;
 	}
+	
+	return (0);
 }
