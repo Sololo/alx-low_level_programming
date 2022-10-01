@@ -13,9 +13,9 @@ int main(int argc, char *argv[])
 	int x, y;
 
 	x = 0;
-	y = argc;
+	y = argc - 1;
 
-	while (y >= 0)
+	while (y > 0)
 	{
 		printf("%s\n", argv[x]);
 		x++;
