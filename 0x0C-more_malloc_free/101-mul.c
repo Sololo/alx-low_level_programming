@@ -89,11 +89,11 @@ int main(int argc, char argv[])
 	for (i = 0; i < l - 1; i++)
 	{
 		if (result[i])
-			a = 1;
-		if (a)
+			x = 1;
+		if (x)
 			_putchar(result[i] + '0');
 	}
-	if (!a)
+	if (!x)
 		_putchar('0');
 	_putchar('\n');
 	free(result);
