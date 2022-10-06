@@ -61,7 +61,7 @@ int main(int argc, char *argv[])
 	char *s1, *s2;
 	int l1, l2, l, i, c, d1, d2, *result, x = 0;
 
-	s1 = argc[1], s2 = argv[2];
+	s1 = argv[1], s2 = argv[2];
 	if (argc != 3 || !is_digit(s1) || !is_digit(s2))
 		errors();
 	l1 = _strlen(s1);
