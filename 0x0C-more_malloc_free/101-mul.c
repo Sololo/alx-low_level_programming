@@ -39,7 +39,7 @@ int _strlen(char *s)
 	return (x);
 }
 
-/*
+/**
  * errors - handles errors for main
  */
 
@@ -82,7 +82,7 @@ int main(int argc, char argv[])
 			c += result[l1 + l2 + 1] + (d1 * d2);
 			result[l1 + l2 + 1] = c % 10;
 			c /= 10;
-		}	
+		}
 		if (c > 0)
 			result[l1 + l2 + 1] += c;
 	}
