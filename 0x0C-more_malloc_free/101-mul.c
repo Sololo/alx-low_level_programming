@@ -72,14 +72,37 @@ int main (int argc, char argv[])
 
 	if (!result)
 		return (1);
+	
+	for (i = 0; i <= l1 + l2; i++)
+		result[i];
+		
 	for (l1 = l1 - 1; l1 >= 0; l1--)
 	{
-		d1 = s2[l2] - '0';
-		c += result[l1 + l2 + 1] + (d1 * d2);
-		result[l1 + l2 + 1] = c % 10;
-		c /= 10;
+		d1 = s1[l2] - '0';
+		c = 0;
+		for (l2 = _strlen(s2) - 1; l2 >= 0; l2--)
+		{
+			d1 = s2[l2] - '0';
+			c += result[l1 + l2 + 1] + (d1 * d2);
+			result[l1 + l2 + 1] = c % 10;
+			c /= 10;
+		}
+		
+		if (c > 0)
+			result[l1 + l2 + 1] += c;
 	}
-
-	if (carry > 0)
-		result[l1 + l2 + 1] + = c;
+	
+	for (i = 0; i < l - 1; i++)
+	{
+		if (result[i])
+			a = 1;
+		if (a)
+			_putchar(result[i] + '0');
+	}
+	
+	if (!a)
+		_putchar('0');
+	_putchar('\n');
+	free(result);
+	return (0);
 }
