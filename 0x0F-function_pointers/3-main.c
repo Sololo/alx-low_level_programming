@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
 	opn = get_op_func(argv[2]);
 
 
-	if (opn == NULL)
+	if (opn == NULL && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
