@@ -9,7 +9,7 @@
 int main(int argc, char *argv[])
 {
 	int x, y;
-	int (*op)(int, int);
+	int (*opn)(int, int);
 
 	if (argc != 4)
 	{
@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	op = get_op_func(argv[2]);
+	opn = get_op_func(argv[2]);
 
 
-	if (op == NULL)
+	if (opn == NULL)
 	{
 		printf("Error\n");
 		exit(99);
@@ -35,6 +35,6 @@ int main(int argc, char *argv[])
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 
-	printf("%\n", op(a, b));
+	printf("%\n", opn(a, b));
 	return (0);
 }
