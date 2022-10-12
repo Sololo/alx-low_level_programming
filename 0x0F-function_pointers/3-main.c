@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	if (opn == NULL)
 	{
 		printf("Error\n");
-		exit(99);
+		exit(100);
 	}
 
 	x = atoi(argv[1]);
