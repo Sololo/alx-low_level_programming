@@ -19,12 +19,12 @@ int (*get_op_func(char *s))(int, int)
 	};
 	int x = 0;
 
-	while (x < 10)
+	while (ops[x].op)
 	{
-		if (s[0] == ops->op[x])
-			break;
+		if (strcmp(ops[x].op, s) == 0)
+			return (ops[x].f);
 		x++;
 	}
 
-	return (ops[x / 2].f);
+	return (NULL);
 }
