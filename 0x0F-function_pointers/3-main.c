@@ -8,7 +8,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int x, y;
+	int x, y, result;
+	char i;
 	int (*opn)(int, int);
 
 	if (argc != 4)
@@ -16,25 +17,28 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-
-	if (argv[2][1])
+	
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
+	
+	if (!opn)
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	opn = get_op_func(argv[2]);
+	i = *argv[2];
 
 
-	if (opn == NULL && b == 0)
+	if ((i == '/' || o == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
-
-	printf("%\n", opn(a, b));
+	
+	result = opn(x, y);
+	
+	printf("%\d\n", result);
+	
 	return (0);
 }
