@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
 	for (x = 0; x < bytes; x++)
 	{
-		if (x == bytes -1)
+		if (x == bytes - 1)
 		{
 			printf("%02hhx\n", arr[x]);
 			break;
