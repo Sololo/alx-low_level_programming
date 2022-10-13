@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 	
 	result = opn(x, y);
 	
-	printf("%\d\n", result);
+	printf("%d\n", result);
 	
 	return (0);
 }
