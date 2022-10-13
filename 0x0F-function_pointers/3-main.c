@@ -4,13 +4,13 @@
  * main - program that performs simple operations
  * @argc: argument counter.
  * @argv: argument vector.
- * Return: Always 0.
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
 	int x, y, result;
 	char i;
-	int (*opn)(int, int);
+	int (*func)(int, int);
 
 	if (argc != 4)
 	{
@@ -21,9 +21,9 @@ int main(int argc, char *argv[])
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
 	
-	opn = get_op_func(argv[2]);
+	func = get_op_func(argv[2]);
 	
-	if (!opn)
+	if (!func)
 	{
 		printf("Error\n");
 		exit(99);
@@ -31,13 +31,13 @@ int main(int argc, char *argv[])
 
 	i = *argv[2];
 
-	if ((i == '/' || o == '%') && b == 0)
+	if ((i == '/' || i == '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
 	
-	result = opn(x, y);
+	result = func(x, y);
 	
 	printf("%d\n", result);
 	
