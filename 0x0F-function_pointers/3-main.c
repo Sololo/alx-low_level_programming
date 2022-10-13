@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 
 	i = *argv[2];
 
-	if ((i == '/' || i == '%') && b == 0)
+	if ((i == '/' || i == '%') && y == 0)
 	{
 		printf("Error\n");
 		exit(100);
