@@ -17,12 +17,12 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(98);
 	}
-	
+
 	x = atoi(argv[1]);
 	y = atoi(argv[3]);
-	
+
 	func = get_op_func(argv[2]);
-	
+
 	if (!func)
 	{
 		printf("Error\n");
@@ -36,10 +36,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	
+
 	result = func(x, y);
-	
+
 	printf("%d\n", result);
-	
+
 	return (0);
 }
