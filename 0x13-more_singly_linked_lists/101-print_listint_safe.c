@@ -6,7 +6,7 @@
  * Return: none
  */
 
-voide free_listp(listp_t **head)
+void free_listp(listp_t **head)
 {
 	listp_t *x;
 	listp_t *y;
@@ -17,7 +17,7 @@ voide free_listp(listp_t **head)
 		while ((x = y) != NULL)
 		{
 			y = y->next;
-			free(temp);
+			free(x);
 		}
 		*head = NULL;
 	}
@@ -45,6 +45,7 @@ size_t print_listint_safe(const listint_t *head)
 
 		y->p = (void *)head;
 		y->next = x;
+		x = y;
 
 		z = x;
 
