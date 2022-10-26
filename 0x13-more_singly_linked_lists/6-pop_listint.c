@@ -11,7 +11,7 @@ int pop_listint(listint_t **head)
 {
 	int hnode;
 	listint_t *h;
-	listsint_t *y;
+	listint_t *y;
 
 	if (*head == NULL)
 		return (0);
