@@ -23,8 +23,8 @@ int pop_listint(listint_t **head)
 	h = y->next;
 	
 	free(y);
-
+	
 	*head = h;
-
+	
 	return (hnode);
 }
