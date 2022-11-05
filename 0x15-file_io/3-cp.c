@@ -32,19 +32,19 @@ void error_file(int file_from, int file_to, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	int file_f, file_t, err_c;
+	int file_f, file_to, err_c;
 	ssize_t x, y;
 	char buf[1024];
 
 	if (argc != 3)
 	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_f file_t");
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_f file_to");
 		exit(97);
 	}
 
 	file_f = open(argv[1], O_RDONLY);
-	file_t = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_file(file_f, file_t, argv);
+	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
+	error_file(file_f, file_to, argv);
 
 	x = 1024;
 	while (x == 1024)
