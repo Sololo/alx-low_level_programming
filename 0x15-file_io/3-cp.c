@@ -32,7 +32,7 @@ void error_file(int file_from, int file_to, char *argv[])
 
 int main(int argc, char *argv[])
 {
-	int file_f, file_to, err_c;
+	int file_from, file_to, err_c;
 	ssize_t x, y;
 	char buf[1024];
 
@@ -42,14 +42,14 @@ int main(int argc, char *argv[])
 		exit(97);
 	}
 
-	file_f = open(argv[1], O_RDONLY);
+	file_from = open(argv[1], O_RDONLY);
 	file_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
-	error_file(file_f, file_to, argv);
+	error_file(file_from, file_to, argv);
 
 	x = 1024;
 	while (x == 1024)
 	{
-		x = read(file_f, buf, 1024);
+		x = read(file_from, buf, 1024);
 		if (x == -1)
 			error_file(-1, 0, argv);
 		y = write(file_to, buf, x);
@@ -60,14 +60,14 @@ int main(int argc, char *argv[])
 	err_c = close(file_f);
 	if (err_c == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_f);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 
 	err_c = close(file_to);
 	if (err_c == -1)
 	{
-		dprint(STDERR_FILENO, "Error: Cant close fd %d\n", file_f);
+		dprint(STDERR_FILENO, "Error: Can't close fd %d\n", file_from);
 		exit(100);
 	}
 	return (0);
