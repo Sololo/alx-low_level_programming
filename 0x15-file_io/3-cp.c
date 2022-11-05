@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 {
 	int file_f, file_t, err_c;
 	ssize_t x, y;
-	char buff[1024];
+	char buf[1024];
 
 	if (argc != 3)
 	{
